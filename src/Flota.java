@@ -119,37 +119,43 @@ public class Flota {
     
     public boolean eliminarMicro(String patente){
         int i = 0; boolean cumplio = false;
-        while((i < capacidadFlota) && !(micros[i].getPatente().equals(patente))){
+        
+        while (i<capacidadFlota){
+            if(micros[i] != null){
+                if(micros[i].getPatente().equals(patente)){
+                    micros[i] = null;
+                    cumplio = true;
+                    return cumplio;
+                }
+            }    
             i++;
-        }
-        if((i < capacidadFlota)){
-            micros[i] = null;
-            cumplio = true;
-            for (int j = i; j < capacidadFlota; j++) {
-                if (j + 1 < capacidadFlota)
-                    micros[j] = micros[j + 1];
-            }
         }
         return cumplio;
     }
 
     public Flota.Micro buscarporPatente(String patente){
-        int i=0;
-        while ((i<capacidadFlota)&&(!micros[i].getPatente().equals(patente)))
+        int i=0; 
+        while (i<capacidadFlota){
+            if(micros[i] != null){
+                if(micros[i].getPatente().equals(patente)){
+                    return micros[i];
+                }
+            }    
             i++;
-        if (i<capacidadFlota)
-            return micros[i];
-        else
-            return null;
+        }
+        return null;
     }
 
     public Flota.Micro buscarporDestino(String destino){
-        int i=0;
-        while ((i<capacidadFlota)&&(!micros[i].getPatente().equals(destino)))
+        int i=0; 
+        while (i<capacidadFlota){
+            if(micros[i] != null){
+                if(micros[i].getDestino().equals(destino)){
+                    return micros[i];
+                }
+            }    
             i++;
-        if (i<capacidadFlota)
-            return micros[i];
-        else
-            return null;
+        }
+        return null;
     }
 }

@@ -19,6 +19,7 @@ public class p2_s2_ej5_B {
 
         System.out.println("Por favor ingrese la patente del micro que desea eliminar: "); patente = Lector.leerString();
         
+        
         if(f.eliminarMicro(patente)){
             System.out.println("El micro ha sido eliminado exitosamente de la flota");
         }
@@ -39,7 +40,12 @@ public class p2_s2_ej5_B {
 
         System.out.println("Por favor ingrese el destino del micro que desea conocer: "); destino = Lector.leerString();
 
-        System.out.println("La patente del micro cuyo destino es " + destino + "es: " + f.buscarporDestino(destino).getPatente());
+        if(f.buscarporDestino(destino) != null){
+            System.out.println("La patente del micro cuyo destino es " + destino + "es: " + f.buscarporDestino(destino).getPatente());
+        }
+        else{
+            System.out.println("No se ha encontrado el micro");
+        }
 
     }
 }
