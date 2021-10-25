@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "C:\\Users\\nicop\\Desktop\\Sistemas\\TALLER\\Ejercicios\\Practica\\Practica 2 OO\\Practica 1\\lib\\PaqueteLectura.jar"
+    ]
+}
