@@ -41,4 +41,7 @@ public class Triangulo extends Figura{
         return lado1 + lado2 + lado3;
     }
     
+    public String toString(){
+        return super.toString() + "Lados: " + lado1 +" "+ lado2 +" " + lado3;
+    }
 }
