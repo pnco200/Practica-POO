@@ -1,4 +1,4 @@
-public class Empleado {
+public abstract class Empleado {
     private String nombre;
     private double sueldoBasico;
 
@@ -17,13 +17,16 @@ public class Empleado {
         this.sueldoBasico = sueldoBasico;
     }
 
-    public double calcularSueldoACobrar(){
-        return sueldoBasico;
-    }
+    public abstract double calcularSueldoACobrar();
 
     public String getNombre(){
         return nombre;
     }
+
+    public double getSueldoBasico(){
+        return sueldoBasico;
+    }
+    
     public String toString(){
         String aux = "El empleado " + getNombre() + " debe cobrar: ";
         return aux;

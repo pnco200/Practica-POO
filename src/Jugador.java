@@ -18,9 +18,9 @@ public class Jugador extends Empleado{
 
     public double calcularSueldoACobrar(){
         if((goles / pratidosJugados) > 0.5)
-            return super.calcularSueldoACobrar()*2;
+            return super.getSueldoBasico()*2;
         else
-            return super.calcularSueldoACobrar();
+            return super.getSueldoBasico();
     }
 
     public String toString(){

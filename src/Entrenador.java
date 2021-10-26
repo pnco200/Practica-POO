@@ -12,11 +12,11 @@ public class Entrenador extends Empleado {
 
     public double calcularSueldoACobrar(){
         if(cantCampeonatos >= 1 && cantCampeonatos <= 4)
-            return super.calcularSueldoACobrar() + 50000;
+            return super.getSueldoBasico() + 50000;
         else if(cantCampeonatos >= 5 && cantCampeonatos <= 10)
-            return super.calcularSueldoACobrar() + 30000;
+            return super.getSueldoBasico() + 30000;
         else if(cantCampeonatos > 10)
-            return super.calcularSueldoACobrar() + 50000;
+            return super.getSueldoBasico() + 50000;
         else
             return 0;
     }
