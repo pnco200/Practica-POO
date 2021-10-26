@@ -1,35 +1,25 @@
-public class Triangulo{
+public class Triangulo extends Figura{
     
     private double lado1;
     private double lado2;
     private double lado3;
-    private String colorRelleno;
-    private String colorLinea;
     private double devlado;
-    private String devcolor;
     
     public Triangulo(){
-        
+        super();
     }
     
     public Triangulo(double unLado1, double unLado2, double unLado3, String unColorRelleno, String unColorLinea){
+        super(unColorRelleno, unColorLinea);
         lado1 = unLado1;
         lado2 = unLado2;
         lado3 = unLado3;
-        colorRelleno = unColorRelleno;
-        colorLinea = unColorLinea;
     }
 
     public void setLados(double lado1, double lado2, double lado3){
         this.lado1 = lado1;
         this.lado2 = lado2;
         this.lado3 = lado3;
-    }
-
-
-    public void setColores(String colorRelleno, String colorLinea){
-        this.colorRelleno = colorRelleno;
-        this.colorLinea = colorLinea;
     }
 
     public double getLados(int unLado){
@@ -42,20 +32,13 @@ public class Triangulo{
         return devlado;
     }  
     
-    public double getArea(){
+    public double calcularArea(){
         double s = (lado1 + lado2 + lado3) / 2;
         return Math.sqrt(s*(s-lado1)*(s-lado2)*(s-lado3));
     }
 
-    public double getPerimetro(){
+    public double calcularPerimetro(){
         return lado1 + lado2 + lado3;
     }
     
-    public String getColores(String unColor){
-        if(unColor.equals("relleno"))
-            devcolor = colorRelleno;
-        if(unColor.equals("linea"))
-            devcolor = colorLinea;
-        return devcolor;
-    }
 }
