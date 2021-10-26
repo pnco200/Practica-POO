@@ -1,6 +1,6 @@
 public class Flota {
     public int capacidadFlota = 15;
-    public Micro[] micros = new Micro[capacidadFlota];
+    private Micro[] micros = new Micro[capacidadFlota];
 
     static class Micro {
         private String patente;
@@ -114,7 +114,11 @@ public class Flota {
     }
 
     public boolean flotaCompleta(){
-        return (micros[capacidadFlota] != null);
+        int i = 0;
+        while(i < capacidadFlota && micros[i] != null){
+            i++;
+        }
+        return i < capacidadFlota;
     }
     
     public boolean eliminarMicro(String patente){

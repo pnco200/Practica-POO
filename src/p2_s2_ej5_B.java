@@ -3,16 +3,15 @@ import PaqueteLectura.Lector;
 public class p2_s2_ej5_B {
     public static void main(String[] args) {
         Flota f = new Flota();
-        String patente, destino, horaSalida; int completado = 0;      
+        String patente, destino, horaSalida;   
         
         System.out.println("Por favor ingrese la patente del micro: "); patente =Lector.leerString(); 
-        while(!(patente.equals("ZZZ000")) && (completado < f.capacidadFlota)){  
+        while(!(patente.equals("ZZZ000")) && (f.flotaCompleta())){  
             System.out.println("Por favor ingrese el destino del micro: "); destino = Lector.leerString();
             System.out.println("Ingrese la hora de salida del micro: "); horaSalida = Lector.leerString();
             
             Flota.Micro x = new Flota.Micro(patente, destino, horaSalida);
             f.agregarMicro(x);
-            completado ++;
             
             System.out.println("Por favor ingrese la patente del micro: "); patente =Lector.leerString(); 
         }
@@ -36,7 +35,7 @@ public class p2_s2_ej5_B {
         System.out.println("Por favor ingrese el destino del micro que desea conocer: "); destino = Lector.leerString();
 
         if(f.buscarporDestino(destino) != null){
-            System.out.println("La patente del micro cuyo destino es " + destino + "es: " + f.buscarporDestino(destino).getPatente());
+            System.out.println("La patente del micro cuyo destino es " + destino + " es: " + f.buscarporDestino(destino).getPatente());
         }
         else{
             System.out.println("No se ha encontrado el micro");
