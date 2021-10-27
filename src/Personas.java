@@ -29,6 +29,6 @@ public abstract class Personas {
     }
 
     public String toString(){
-        return "Mi nombre es: " + getNombre() + " mi DNI es: " + getDNI() + " y tengo " + getEdad() + " años";
+        return "Mi nombre es: " + getNombre() + " mi DNI es: " + getDNI() + " y tengo " + getEdad() + " años.";
     }
 }

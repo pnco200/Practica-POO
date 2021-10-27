@@ -3,8 +3,8 @@ public abstract class Empleado {
     private double sueldoBasico;
 
     public Empleado(String nombre, double sueldoBasico){
-        setNombre(nombre);
-        setsueldoBasico(sueldoBasico);
+        this.nombre = nombre;
+        this.sueldoBasico = sueldoBasico;
     }
 
     public Empleado(){}
