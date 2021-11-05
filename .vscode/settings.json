@@ -2,6 +2,6 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "C:\\Users\\nicop\\Desktop\\Sistemas\\TALLER\\Ejercicios\\Practica\\Practica 2 OO\\Git prueba\\Practica-POO\\lib\\PaqueteLectura.jar"
+        "C:\\Users\\nicop\\Desktop\\Sistemas\\TALLER\\Practica 2 OO\\Git prueba\\Practica-POO\\lib\\PaqueteLectura.jar"
     ]
 }
