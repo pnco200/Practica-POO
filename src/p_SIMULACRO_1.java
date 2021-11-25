@@ -1,5 +1,5 @@
 import PaqueteLectura.*;
-public class Parcial_ej2 {
+public class p_SIMULACRO_1 {
   public static void main(String[] args) {
     Estanteria e = new Estanteria(5, 3);
     String autor, titulo; double peso;
